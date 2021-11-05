@@ -1,6 +1,6 @@
 import copy
 import numbers
-from collections import Hashable
+from collections.abc import Hashable
 from functools import partial
 
 from bson import ObjectId, json_util

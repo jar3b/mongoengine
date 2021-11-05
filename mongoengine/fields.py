@@ -6,7 +6,7 @@ import socket
 import time
 import uuid
 import warnings
-from collections import Mapping
+from collections.abc import Mapping
 from operator import itemgetter
 
 from bson import Binary, DBRef, ObjectId, SON
