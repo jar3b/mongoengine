@@ -808,7 +808,7 @@ class Document(BaseDocument):
         collection = cls._get_collection()
         # 746: when connection is via mongos, the read preference is not necessarily an indication that
         # this code runs on a secondary
-        if not collection.is_mongos and collection.read_preference > 1:
+        if collection.is_mongos is not None and collection.read_preference.mode > 1:
             return
 
         # determine if an index which we are creating includes
